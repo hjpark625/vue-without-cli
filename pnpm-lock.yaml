@@ -13,6 +13,9 @@ devDependencies:
   '@vue/compiler-sfc':
     specifier: ^3.4.21
     version: 3.4.21
+  '@vue/runtime-dom':
+    specifier: ^3.4.21
+    version: 3.4.21
   css-loader:
     specifier: ^7.1.1
     version: 7.1.1(webpack@5.91.0)
