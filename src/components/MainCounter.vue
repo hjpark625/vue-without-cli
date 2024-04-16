@@ -7,17 +7,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const count = ref(0);
+const count = ref(0)
 
 const onIncrease = () => {
-  count.value++;
-};
+  count.value++
+}
 
 const onDecrease = () => {
-  count.value--;
-};
+  count.value--
+}
 </script>
 
 <style lang="scss" scoped>
