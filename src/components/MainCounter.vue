@@ -28,6 +28,7 @@ const onDecrease = () => {
   height: 100vh;
   font-size: 2rem;
   .button {
+    cursor: pointer;
     margin: 0 1rem;
     border-radius: 4px;
     width: 3rem;
