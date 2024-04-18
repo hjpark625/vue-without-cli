@@ -19,6 +19,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
+    "@types/node": "^20.12.7",
+    "@types/webpack": "^5.28.5",
+    "@types/webpack-env": "^1.18.4",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
     "@vue/compiler-sfc": "^3.4.21",
@@ -38,6 +41,7 @@
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.10",
     "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "vue-loader": "^17.4.2",
     "vue-style-loader": "^4.1.3",
