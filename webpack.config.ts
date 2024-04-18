@@ -1,13 +1,14 @@
 import * as path from 'path'
-import * as webpack from 'webpack'
+import { DefinePlugin } from 'webpack'
 import { VueLoaderPlugin } from 'vue-loader'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import type { Configuration } from 'webpack'
 import 'webpack-dev-server'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function (env: Record<string, any>, args: Record<string, any>): webpack.Configuration {
+export default function (env: Record<string, any>, args: Record<string, any>): Configuration {
   const isProduction = args.mode === 'production'
 
   return {
@@ -55,7 +56,7 @@ export default function (env: Record<string, any>, args: Record<string, any>): w
       }
     },
     plugins: [
-      new webpack.DefinePlugin({
+      new DefinePlugin({
         __VUE_OPTIONS_API__: 'true',
         __VUE_PROD_DEVTOOLS__: 'false',
         __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false'
