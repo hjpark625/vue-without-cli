@@ -6,13 +6,6 @@ import TerserPlugin from 'terser-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import 'webpack-dev-server'
 
-// const { VueLoaderPlugin } = require('vue-loader')
-// const { DefinePlugin } = require('webpack')
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const TerserPlugin = require('terser-webpack-plugin')
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-// const path = require('path')
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function (env: Record<string, any>, args: Record<string, any>): webpack.Configuration {
   const isProduction = args.mode === 'production'
