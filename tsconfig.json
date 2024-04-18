@@ -5,6 +5,7 @@
     "strict": true,
     "jsx": "preserve",
     "moduleResolution": "Node",
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
@@ -17,6 +18,11 @@
     // NOTE: build시 vue-loader로 로드 이후 ts-loader에서 타입에러 발생으로 빌드실패 문제로 인한 false처리
     "noImplicitAny": false
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": ["src", "webpack.config.ts"],
   "exclude": ["node_modules"]
 }
