@@ -4,6 +4,7 @@ import { VueLoaderPlugin } from 'vue-loader'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import type { Configuration } from 'webpack'
 import 'webpack-dev-server'
 
@@ -16,7 +17,7 @@ export default function (env: Record<string, any>, args: Record<string, any>): C
     entry: './src/main.ts',
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'static/js/[name].[contenthash].js',
+      filename: 'static/js/[name].[contenthash:8].js',
       publicPath: '/'
     },
     module: {
@@ -56,6 +57,7 @@ export default function (env: Record<string, any>, args: Record<string, any>): C
       }
     },
     plugins: [
+      new CleanWebpackPlugin(),
       new DefinePlugin({
         __VUE_OPTIONS_API__: 'true',
         __VUE_PROD_DEVTOOLS__: 'false',
@@ -68,7 +70,7 @@ export default function (env: Record<string, any>, args: Record<string, any>): C
       }),
       isProduction
         ? new MiniCssExtractPlugin({
-            filename: 'static/css/[name].[contenthash].css'
+            filename: 'static/css/[name].[contenthash:8].css'
           })
         : undefined
     ],
@@ -78,10 +80,10 @@ export default function (env: Record<string, any>, args: Record<string, any>): C
         new TerserPlugin({
           terserOptions: {
             compress: {
-              drop_console: true
+              drop_console: isProduction
             },
             output: {
-              comments: false
+              comments: !isProduction
             }
           }
         })
