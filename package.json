@@ -1,17 +1,19 @@
 {
   "name": "vue-ts-webpack",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "vue app without cli",
+  "engines": {
+    "node": "^21.0.0",
+    "pnpm": "^9.0.0"
+  },
   "scripts": {
     "dev": "webpack serve --mode development",
     "build": "webpack --mode production",
     "preview": "serve -s dist -p 3000",
     "type-check": "vue-tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "hjpark625",
+  "license": "MIT",
   "dependencies": {
     "serve": "^14.2.1",
     "vue": "^3.4.21",
