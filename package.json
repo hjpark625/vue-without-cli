@@ -15,7 +15,7 @@
   "author": "hjpark625",
   "license": "MIT",
   "dependencies": {
-    "serve": "^14.2.1",
+    "express": "^4.19.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.1"
   },
@@ -30,6 +30,7 @@
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/runtime-dom": "^3.4.21",
+    "chalk": "^4",
     "css-loader": "^7.1.1",
     "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
