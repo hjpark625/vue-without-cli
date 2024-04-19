@@ -24,5 +24,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(3000, () => {
-  console.log(chalk.green('Server is running on http://localhost:3000'))
+  console.log(chalk.green(`Server is running on port ${chalk.blue('3000')}`))
 })
